@@ -61,7 +61,7 @@ module.exports = {
 
 
 
-1. test.js
+2. test.js
 
 ```javascript
 const { BUILD_ENV, NODE_ENV } = process.env
