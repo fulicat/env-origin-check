@@ -1,0 +1,35 @@
+{
+  "name": "env-origin-check",
+  "version": "1.0.0",
+  "description": "env origin (api origin) check",
+  "main": "index.js",
+  "scripts": {
+    "daily": "cross-env NODE_ENV=development BUILD_ENV=daily node test",
+    "gray": "cross-env NODE_ENV=development BUILD_ENV=gray node test",
+    "prod": "cross-env NODE_ENV=development BUILD_ENV=prod node test",
+    "build:daily": "cross-env NODE_ENV=production BUILD_ENV=daily node test",
+    "build:gray": "cross-env NODE_ENV=production BUILD_ENV=gray node test",
+    "build:prod": "cross-env NODE_ENV=production BUILD_ENV=prod node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fulicat/env-origin-check.git"
+  },
+  "keywords": [
+    "env-origin-check",
+    "env-check",
+    "env",
+    "vue",
+    "react",
+    "gulp"
+  ],
+  "author": "fulicat",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fulicat/env-origin-check/issues"
+  },
+  "homepage": "https://github.com/fulicat/env-origin-check#readme",
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
