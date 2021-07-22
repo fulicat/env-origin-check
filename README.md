@@ -68,10 +68,8 @@ const { BUILD_ENV, NODE_ENV } = process.env
 const { EnvOriginCheck } = require('env-origin-check')
 const ENV_CONFIGS = require('./env.config')
 
-// 当前环境配置
 const ENV_CONFIG = ENV_CONFIGS[BUILD_ENV]
 
-// 检测环境配置项
 EnvOriginCheck({
     ORIGINS: ENV_CONFIGS.ORIGINS,
     locale: 'en-US',
@@ -83,6 +81,20 @@ EnvOriginCheck({
 module.exports = {
     defines: ENV_CONFIG.defines
 }
+```
+
+
+
+```javascript
+// config error, has warning
+>yarn daily
+// config error, will force stop when production mode
+>yarn build:daily
+
+// config success 
+>yarn prod
+>yarn build:prod
+
 ```
 
 
