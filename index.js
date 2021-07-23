@@ -3,7 +3,7 @@
 * @Author: Jack.Chan
 * @Date:   2021-07-22 14:24:48
 * @Last Modified by:   Jack.Chan
-* @Last Modified time: 2021-07-22 15:10:56
+* @Last Modified time: 2021-07-23 18:16:56
 */
 
 
@@ -103,7 +103,7 @@ const EnvOriginCheck = (options) => {
 						console.log('\n', '===============================================================', '\n\n\n');
 						if (mode === 'production') {
 							// force exit when production mode
-							process.exit(0);
+							process.exit(4);
 						}
 						break;
 					}
@@ -113,11 +113,11 @@ const EnvOriginCheck = (options) => {
 				console.log('\n', LANG.SUCCESS, '\n');
 			}
 			if (forceExit) {
-				process.exit(0);
+				process.exit(4);
 			}
 		} else {
 			console.log('\n', LANG.WARNING_ORIGINS, '\n');
-			process.exit(0);
+			process.exit(4);
 		}
 	}
 }
