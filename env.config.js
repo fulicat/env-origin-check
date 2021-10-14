@@ -2,15 +2,18 @@
 * @Author: Jack.Chan
 * @Date:   2021-07-22 14:42:08
 * @Last Modified by:   Jack.Chan
-* @Last Modified time: 2021-07-22 15:14:17
+* @Last Modified time: 2021-10-14 18:40:55
 */
 
-const ORIGINS_COMMONS = ['//static.test.com']
+const ORIGINS_COMMONS = [
+	'//static.test.com',
+	'//rpo-com.oss-ap-northeast-1.aliyun.com'
+]
 
 const ORIGINS = {
 	daily: [...ORIGINS_COMMONS, '//daily.api.test.com'],
 	gray: [...ORIGINS_COMMONS, '//gray.api.test.com'],
-	prod: [...ORIGINS_COMMONS, '//api.test.com'],
+	prod: [...ORIGINS_COMMONS, '//api.test.com']
 }
 
 // ============================================================================
@@ -39,8 +42,9 @@ module.exports = {
 	},
 	prod: {
 		defines: {
-			API_BASE: '//api.test.com/api',
-			HELLO: 'prod'
+			// API_BASE: '//api.test.com/api',
+			HELLO: 'prod',
+			publicPath: '//rpo-com.oss-ap-northeast-1.aliyun.com/sa'
 		}
 	}
 }

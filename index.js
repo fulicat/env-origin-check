@@ -3,7 +3,7 @@
 * @Author: Jack.Chan
 * @Date:   2021-07-22 14:24:48
 * @Last Modified by:   Jack.Chan
-* @Last Modified time: 2021-07-23 18:16:56
+* @Last Modified time: 2021-10-14 18:41:10
 */
 
 
@@ -16,7 +16,7 @@
 const isURL = (url, origins) => {
 	let result = false;
 	if (url) {
-		const pattern = /^(http:|https:)?\/\/[a-zA-Z0-9\.]*/
+		const pattern = /^(http:|https:)?\/\/[a-zA-Z0-9\.\-]*/
 		url = url.toString();
 		result = pattern.test(url);
 		if (result && typeof(origins) === 'object' && origins.length) {
